@@ -3,5 +3,8 @@ Here are the public contents of my work thus far, including cards released per r
 You can contact me on:
 Fiverr
 - https://www.fiverr.com/die_frauen/custom-code-single-ygopro-cards-for-you
+
 Or you can buy me a coffee in exchange
 - https://ko-fi.com/diefrauenvi
+
+I make $1 a card each, with some exceptions that can be arranged. May offer a special deal in a future time.
