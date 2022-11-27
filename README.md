@@ -1,33 +1,20 @@
-FIRST SAMPLE limited offer
+Die Frauen's Create-A-Card Batch
 
 CONTENTS
 
-FIRST SAMPLE cdb (card database) file
-pics folder
-scripts folder
+- cdb (card database) files (1)
+- pics folder (6)
+- scripts folder (6)
+- high resolution images folder (6)
 
-Here are the first batch of cards released for this exclusive offer, 5 cards each for the first 3 clients to order. They are as follows.
+CARDS
 
-Client 1: Arc Des
 - Light Magician               /46990001 (NEW - 11/27/2022)
--
--
--
--
-
-Client 2: BlazeFenix
 - Infernal King Spectri-Oh     /46990006 (NEW - 11/27/2022)
 - Firetruck Monkey Business    /46990007 (NEW - 11/27/2022)
 - Ghoti Starlight              /46990008 (NEW - 11/27/2022)
 - Ghoti Genesis                /46990009 (NEW - 11/27/2022)
 - Azzar - Elegance of the Ghoti/46990010 (NEW - 11/27/2022)
-
-Client 3:
--
--
--
--
--
 
 HOW TO USE
 
@@ -41,5 +28,5 @@ All stock images used for these cards were retrieved from online sources through
 
 STOCK IMAGE SOURCES
 
-Light Magician - AviArts / https://www.reddit.com/user/ThePeachyPanda/
-Infernal King Spectri-Oh - Pyron - Darkstalkers / source pending 
+- Light Magician - AviArts / https://www.reddit.com/user/ThePeachyPanda/
+- Infernal King Spectri-Oh - Pyron - Darkstalkers / source pending 
