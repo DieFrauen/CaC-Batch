@@ -31,7 +31,6 @@ function c46990006.initial_effect(c)
 	e3:SetRange(LOCATION_MZONE)
 	e3:SetTargetRange(LOCATION_DECK,LOCATION_DECK)
 	c:RegisterEffect(e3)
-	
 end
 function c46990006.sumcon(e)
 	return Duel.GetFieldGroupCount(e:GetHandlerPlayer(),LOCATION_MZONE,0)>0
@@ -47,6 +46,8 @@ function c46990006.filter(c,typ)
 end
 function c46990006.cond(e,tp,eg,ep,ev,re,r,rp)
 	return Duel.GetFieldGroupCount(tp,LOCATION_ONFIELD,0)<=3
+	and Duel.GetActivityCount(tp,ACTIVITY_SPSUMMON)==0
+	and Duel.GetActivityCount(1-tp,ACTIVITY_SPSUMMON)==0
 	and not Duel.IsExistingMatchingCard(c46990006.filter,tp,LOCATION_MZONE,0,1,nil,SUMMON_TYPE_SPECIAL)
 	and not Duel.IsExistingMatchingCard(c46990006.filter,tp,LOCATION_MZONE,0,1,nil,SUMMON_TYPE_TRIBUTE)
 end
@@ -54,11 +55,11 @@ function c46990006.cost(e,tp,eg,ep,ev,re,r,rp,chk)
 	local g=Duel.GetFieldGroup(tp,LOCATION_EXTRA,0)
 	if chk==0 then return #g>=6 end
 	local rg=g:RandomSelect(tp,6)
-	Duel.Remove(g,POS_FACEDOWN,REASON_COST)
+	Duel.Remove(rg,POS_FACEDOWN,REASON_COST)
 end
 function c46990006.operation(e,tp,eg,ep,ev,re,r,rp)
 	local c=e:GetHandler()
-	if Duel.IsExistingMatchingCard(c46990006.filter,tp,LOCATION_MZONE,0,1,nil,SUMMON_TYPE_SPECIAL) or Duel.IsExistingMatchingCard(c46990006.filter,tp,LOCATION_MZONE,0,1,nil,SUMMON_TYPE_TRIBUTE) then return end
+	if Duel.IsExistingMatchingCard(c46990006.filter,tp,LOCATION_MZONE,0,1,nil,SUMMON_TYPE_SPECIAL) or Duel.IsExistingMatchingCard(c46990006.filter,tp,LOCATION_MZONE,0,1,nil,SUMMON_TYPE_TRIBUTE) or Duel.GetActivityCount(tp,ACTIVITY_SPSUMMON)~=0 or Duel.GetActivityCount(1-tp,ACTIVITY_SPSUMMON)~=0 then return end
 	local e1=Effect.CreateEffect(c)
 	e1:SetType(EFFECT_TYPE_FIELD)
 	e1:SetProperty(EFFECT_FLAG_PLAYER_TARGET+EFFECT_FLAG_CLIENT_HINT)
