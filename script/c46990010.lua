@@ -30,7 +30,7 @@ function c46990010.initial_effect(c)
 end
 c46990010.listed_series={0x18b}
 function c46990010.selfilter(c)
-	return c:IsRace(RACE_FISH)
+	return c:IsSetCard(0x18b)
 end
 function c46990010.selfspcost(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.IsExistingMatchingCard(c46990010.selfilter,tp,LOCATION_REMOVED,0,1,nil) end
